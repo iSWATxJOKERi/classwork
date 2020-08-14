@@ -1,0 +1,33 @@
+<% cat = @cat%>
+<style> 
+    table td {
+        border: solid black 1px;
+    }
+    thead, tfoot {
+        background-color: <%= cat.sex == 'M' ? 'aqua' : 'pink' %>;
+    }
+</style>
+<table>
+    <thead> 
+        <tr>
+        <th colspan='7'> <%= cat.name %> </tr>
+    </thead>
+    <tbody>
+        <td> Color:  </td>
+        <td> <%= cat.color %></td>
+    </tbody>
+    <tbody>
+        <td> Birth Date:  </td>
+        <td> <%= cat.birth_date %></td>
+    </tbody>
+    <tbody>
+        <td> Sex:  </td>
+        <td> <%= cat.sex %></td>
+    </tbody>
+    <tbody>
+        <td> Description:  </td>
+        <td> <%= cat.description %> </td>
+    </tbody>
+        </td>
+    </tbody>
+</table>
