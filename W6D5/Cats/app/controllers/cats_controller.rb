@@ -2,7 +2,6 @@ class CatsController < ApplicationController
     def index
         @cats = Cat.all
         render :index
-        #render json: @cats
     end
 
     def show
@@ -15,12 +14,22 @@ class CatsController < ApplicationController
     end
 
     def new
-        @colors = Cat.colors
+        @cat = Cat.new
         render :new
     end
 
+    def create
+        # render json: "cats are being created"
+        @cat = Cat.new(cat_params)
+        if @cat.save
+            redirect_to cat_url(@cat)
+        else
+            render :new
+        end
+    end
+
+
     def edit
-        @colors = Cat.colors
         @cat = Cat.find_by(id: params[:id])
         render :edit
     end
@@ -34,17 +43,6 @@ class CatsController < ApplicationController
             render :edit
         end
     end
-
-    def create
-        # render json: "cats are being created"
-        @cat = Cat.new(cat_params)
-        if @cat.save
-            redirect_to cat_url(@cat)
-        else
-            render :new
-        end
-    end
-
 
     private 
     def cat_params

@@ -1,4 +1,5 @@
-<h1>Edit cat</h1>
+<h1>Edit Cat!</h1>
+
 <form action='<%= cat_url(@cat) %>' method='POST'>
     <input type='hidden' name='_method' value='PATCH'>
     
@@ -14,8 +15,8 @@
     <label for='female'>Female</label>
     <br><br>
     <label for='color'> <b>Color:  </b> </label>
-    <select name='cat[color]' id='colors'>  
-            <% @colors.each do |color| %> 
+    <select name='cat[color]' id='color'>  
+            <% Cat::COLORS.each do |color| %> 
                 <option value='<% color %>' <%= @cat.color == color ? 'selected' : '' %> ><%= color %></option>
             <% end%>
     </select>

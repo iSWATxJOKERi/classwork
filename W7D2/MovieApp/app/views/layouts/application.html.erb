@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<div class="flexy"> <h1>Music App</h1> </div>
+<html>
+  <%= action = ""%>
+  <%= method = ""%>
+  <% current_user ? action = session_url : action = new_session_url %>
+  <% current_user ? method = "post" : method = "get" %>
+  <form action="<%= action %>" method= <%= method %> >
+
+    <% if current_user %>
+      <input type="hidden" name="_method" value="delete"/>
+      <%= auth_token %>
+      <input type="submit" value="Sign Out"/>
+    <% else %>
+      <div class="flex-container"> <a class="link" href="<%= new_user_url %>">Sign Up</a>  <a class="link" href="<%= new_session_url %>">Log In</a> </div>
+    <% end %>
+
+  </form>
+
+  <head>
+
+  <style>
+    .flex-container, .flexy{
+      display: flex;
+      background-color: Gray;
+    }
+
+    .flex-container {
+      justify-content: flex-end;
+    }
+
+    .link {
+      border: 2px solid red;
+      padding: 10px;
+      border-radius: 25px;
+      background-color: White;
+    }
+
+  </style>
+
+    <title>MovieApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body style="background-color:pink;">
+
+    <% if flash.now[:errors] %>
+      <ul>
+        <% flash.now[:errors].each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

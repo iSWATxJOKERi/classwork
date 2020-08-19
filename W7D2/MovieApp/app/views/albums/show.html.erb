@@ -1,0 +1,39 @@
+<br />
+<form action="<%= album_url(@album.id) %>" method="post">
+    <input="hidden" name="_method" value="delete"/>
+    <%= auth_token %>
+
+    <input type="submit" value="Delete this Album"/>
+</form>
+<br />
+<br />
+
+<style> 
+    table td {
+        border: solid black 1px;
+    }
+    thead, tfoot {
+        background-color: aqua;
+    }
+</style>
+<table>
+    <thead> 
+        <tr>
+        <th colspan='5'> <%= @album.title %> </tr>
+    </thead>
+    <tbody>
+        <td> Band_Id:  </td>
+        <td> <%= @album.band_id %></td>
+    </tbody>
+    <tbody>
+        <td> Year:  </td>
+        <td> <%= @album.year %></td>
+    </tbody>
+</table>
+<br />
+
+<a href="<%= edit_album_url(@album.id) %>">Edit Album</a>
+
+<br />
+<br />
+<a href="<%= band_url(@album.band_id) %>">Back to Band Page</a>
