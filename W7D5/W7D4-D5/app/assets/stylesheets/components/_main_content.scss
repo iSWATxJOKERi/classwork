@@ -1,0 +1,144 @@
+header {
+    font-weight: 700;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#left-side {
+    width: 300px;
+}
+
+.videowrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#right-side {
+    width: 400px;
+}
+
+#middle span, #left-side span {
+    color: gray;
+}
+
+#left-side header {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#left-side ul {
+    list-style: initial;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    padding-left: 20px;
+    text-align: left;
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.left ul {
+    list-style: initial;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    padding-left: 20px;
+    font-weight: bold;
+    text-align: left;
+    li {
+        margin-bottom: 5px;
+    }
+}
+
+#left-side a {
+    text-decoration: underline;
+    color: blue;
+}
+
+.right img {
+    width: 90%;
+    height: 30%;
+}
+
+.video-annotate {
+    margin-top: 5px;
+    padding: 5px;
+    position: relative;
+}
+
+.video-annotate::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 30px;
+    width: 50%;
+    left: 25%;
+    border-bottom: 1px solid gray;
+}
+
+.watn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 65px;
+    width: 50%;
+    left: 25%;
+    border-bottom: 1px solid gray;
+}
+
+.watn {
+    margin: 20px 0px;
+    position: relative;
+}
+
+.watn h2, .left h2 {
+    text-decoration: underline;
+}
+
+.left h2 {
+    margin-top: 3px;
+}
+
+.left {
+    width: 600px;
+}
+
+.right {
+    margin-left: 30px;
+}
+
+#middle span, p {
+    padding-top: 5px;
+}
+
+.catcademy {
+    margin-top: 0px;
+}
+
+#align {
+    text-align: center;
+}
+
+.oped {
+    display: flex;
+    margin-top: 10px;
+}
+
+h2 {
+    font-weight: bold;
+    padding-bottom: 3px;
+}

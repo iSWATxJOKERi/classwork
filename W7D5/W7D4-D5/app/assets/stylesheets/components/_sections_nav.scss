@@ -1,0 +1,23 @@
+.sections ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.topics li {
+    font-family: $sans-serif;
+    margin: 5px;
+}
+
+.topics li:hover {
+    background-color: $lightest-gray; 
+}
+
+.topics > li:hover:last-of-type { 
+    text-decoration: underline;
+}
+
+ul.topics {
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 1px;
+}
