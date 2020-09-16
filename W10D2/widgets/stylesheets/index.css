@@ -1,0 +1,121 @@
+body {
+    background: black;
+}
+
+.clock {
+    font-family: 'Poiret One', cursive;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 150px;
+    margin: auto;
+    background-color: black;
+    border: 1px solid gray;
+    color: white;
+    padding: 0px 10px;
+}
+
+.titles {
+    /* position: absolute; */
+    font-family: 'Poiret One', cursive;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: auto;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+.weather {
+    font-family: 'Poiret One', cursive;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 150px;
+    margin: auto;
+    background-color: black;
+    border: 1px solid gray;
+    color: white;
+    padding: 0px 10px;
+}
+
+.autocomplete {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poiret One', cursive;
+    width: 200px;
+    margin: auto;
+    color: white;
+    border: 1px solid gray;
+}
+
+.autocomplete > h1 {
+    text-align: center;
+}
+
+.temp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.city {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+}
+
+.titles  h1 {
+    border: 1px solid gray;
+    width: 64.66px;
+}
+
+.titles h1:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: orange;
+}
+
+.content {
+    font-family: 'Poiret One', cursive;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 150px;
+    margin: 0px auto auto auto;
+    background-color: black;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    color: white;
+}
+
+.title {
+    width: 600px;
+    margin: auto;
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
