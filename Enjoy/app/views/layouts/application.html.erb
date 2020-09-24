@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enjoy</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <script type="text/javascript">
+    window.ytLogo = "<%= image_url('yt_logo_rgb_light.png') %>";
+  </script>
+  <body>
+    <%= yield %>
+  </body>
+</html>
